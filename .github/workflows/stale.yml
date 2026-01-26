@@ -2,6 +2,7 @@ name: GitHub activity data as a measure of developer activity
 
 on:
   workflow_dispatch:
+  push:              # 允許 push 程式碼時立即觸發 (測試用)
   schedule:
   - cron: '0 */1 * * *'
   - cron: '0 2 * * *'  # 新增的台灣時間早上 10 點 (UTC+8) = UTC 2:00
