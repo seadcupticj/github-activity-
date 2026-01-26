@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
   - cron: '0 * * * *'
+  - cron: '0 2 * * *'  # 新增的台灣時間早上 10 點 (UTC+8) = UTC 2:00
 
 jobs:
   stale:
