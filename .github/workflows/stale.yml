@@ -1,20 +1,14 @@
 name: GitHub activity data as a measure of developer activity
 
 on:
-  workflow_dispatch:  # 手動觸發
-  push:
-    branches:
-      - main         # 明確指定分支，避免解析問題
+  workflow_dispatch:
   schedule:
-    - cron: '0 */1 * * *'   # 每小時執行
-    - cron: '0 2 * * *'     # UTC 2:00 (台灣時間 10:00)
+  - cron: '0 * * * *'
 
 jobs:
   stale:
 
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     
     steps:
       - name: Checkout
