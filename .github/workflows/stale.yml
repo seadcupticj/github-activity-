@@ -92,3 +92,4 @@ jobs:
           makeLatest: ${{ github.event.inputs.release == 'release' }}
           allowUpdates: "true"
           tag: version.txt
+
